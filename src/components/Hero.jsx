@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+import { TypeAnimation } from 'react-type-animation';
 import { Code2, MonitorPlay, Gamepad2, FileCode2 } from 'lucide-react';
 import my_img from '../assets/my_img.JPG';
 
@@ -20,31 +21,43 @@ const Hero = () => {
             Hi, my name is
           </motion.p>
 
-          <motion.h1 
+          <motion.h1
             className="text-4xl sm:text-7xl font-bold text-[var(--color-text-main)] leading-tight pb-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Kranathip Intorrathed,
+            Kranathip Intorrathed
           </motion.h1>
-          
-          <motion.h2 
-            className="text-4xl sm:text-6xl lg:text-4xl font-bold text-[var(--color-text-muted)] mt-2 leading-tight pb-2"
+
+          <motion.h2
+            className="text-3xl sm:text-5xl lg:text-4xl font-bold text-[var(--color-text-muted)] mt-2 leading-tight pb-2 h-[40px] sm:h-[60px] lg:h-[48px]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Gong
+            I'm a{' '}
+            <TypeAnimation
+              sequence={[
+                'Game Developer',
+                2000,
+                'Frontend Developer',
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              className="text-[var(--color-accent)]"
+              repeat={Infinity}
+            />
           </motion.h2>
-          
-          <motion.p 
+
+          <motion.p
             className="text-[var(--color-text-muted)] py-4 max-w-[600px] leading-relaxed mt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            I'm a <span className="text-[var(--color-accent)] font-semibold">Game Developer</span> and <span className="text-[var(--color-accent)] font-semibold">Frontend Developer</span> specializing in building exceptional digital experiences. Currently, I'm focused on rendering 3D graphics and building accessible, human-centered products.
+            I have experience in building games using Unity and developing web applications with React. Passionate about creating engaging user experiences and educational games. Able to work collaboratively and deliver practical, user-focused solutions.
           </motion.p>
 
           {/* CTA Button */}

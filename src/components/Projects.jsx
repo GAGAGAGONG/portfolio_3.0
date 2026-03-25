@@ -8,7 +8,6 @@ const Projects = () => {
       title: "CLEAR THE AIR",
       description: "The Digital Learning Material about The Danger of E-cigarettes.",
       tools: ["Unity", "C#"],
-      github: "https://github.com/",
       demo: "https://epidemiology-unit.itch.io/clear-the-air"
     },
     {
@@ -16,7 +15,6 @@ const Projects = () => {
       title: "Overcooked Online Exhibition Website",
       description: "An online exhibition website for the Overcooked Exhibition.",
       tools: ["HTML", "CSS", "JavaScript"],
-      github: "https://github.com/",
       demo: "https://cmdt-uic.psu.ac.th/Overcooked_exhibition/"
     },
 
@@ -53,9 +51,7 @@ const Projects = () => {
               <div className="flex justify-between items-center mb-6">
                 <Folder className="text-[var(--color-accent)]" size={40} />
                 <div className="flex gap-4">
-                  <a href={project.github} className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors">
-                    <Github size={20} />
-                  </a>
+
                   <a href={project.demo} className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors">
                     <ExternalLink size={20} />
                   </a>

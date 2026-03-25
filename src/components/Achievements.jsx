@@ -6,7 +6,7 @@ const Achievements = () => {
       id: 1,
       date: '1 November 2024 - 28 February 2025',
       title: 'Cooperative Education',
-      description: 'Cooperative Education at The Epidemiology Unit, Faculty of Medicine, Prince of Songkla University.'
+      description: 'Cooperative Education Student, Epidemiology Unit, Faculty of Medicine, Prince of Songkla University. Developed “CLEAR THE AIR” digital learning materials to raise awareness of e-cigarette risks among youth.'
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ const Achievements = () => {
       id: 7,
       date: '19-21 March 2026',
       title: 'Overcooked Exhibition',
-      description: 'Showcased “CLEAR THE AIR” at the Overcooked Exhibition, organized by PSUIC students.'
+      description: 'Showcased “CLEAR THE AIR”, an interactive project focused on e-cigarette risk awareness, organized by PSUIC students. Developed an online exhibition website to present and promote student projects in a digital format.'
     }
   ];
 

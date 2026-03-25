@@ -69,12 +69,6 @@ const Contact = () => {
           >
             <Github size={32} />
           </a>
-          <a
-            href="mailto:example@gmail.com"
-            className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] hover:-translate-y-1 transition-all duration-300 hover:drop-shadow-[0_0_8px_var(--color-accent)]"
-          >
-            <Mail size={32} />
-          </a>
         </div>
 
 

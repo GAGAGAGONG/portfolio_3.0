@@ -1,17 +1,21 @@
 import { motion } from 'framer-motion';
+import { MonitorSmartphone, Gamepad2, Settings2 } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Frontend Development',
+      icon: <MonitorSmartphone className="w-10 h-10 mb-4 text-[var(--color-accent)]" strokeWidth={1.5} />,
       skills: ['React', 'React Native', 'JavaScript', 'Tailwind CSS', 'SCSS', 'HTML5 & CSS3']
     },
     {
       title: 'Game Development',
+      icon: <Gamepad2 className="w-10 h-10 mb-4 text-[var(--color-accent)]" strokeWidth={1.5} />,
       skills: ['Unity', 'C#']
     },
     {
       title: 'Tools & Others',
+      icon: <Settings2 className="w-10 h-10 mb-4 text-[var(--color-accent)]" strokeWidth={1.5} />,
       skills: ['Git & GitHub', 'Figma', 'Antigravity']
     }
   ];
@@ -28,7 +32,6 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold inline text-[var(--color-text-main)] flex-shrink-0">
-
             My Skills
           </h2>
           <div className="h-[1px] bg-[var(--color-secondary)] w-full max-w-[300px]"></div>
@@ -38,21 +41,35 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
-              className="bg-[var(--color-secondary)]/30 rounded-lg p-8 shadow-md border border-transparent hover:border-[var(--color-accent)]/30 hover:-translate-y-2 transition-all duration-300"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              className="group relative bg-[var(--color-secondary)]/30 rounded-xl p-8 shadow-md border border-transparent hover:border-[var(--color-accent)]/30 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col items-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
             >
-              <h3 className="text-xl font-bold text-[var(--color-text-main)] mb-6 border-b border-[var(--color-text-muted)]/20 pb-4">
+              {/* Background Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/0 to-[var(--color-accent)]/0 group-hover:from-[var(--color-accent)]/5 group-hover:to-transparent transition-all duration-500 rounded-xl -z-10"></div>
+
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                {category.icon}
+              </motion.div>
+
+              <h3 className="text-xl font-bold text-[var(--color-text-main)] mb-6 tracking-wide">
                 {category.title}
               </h3>
-              <div className="flex flex-col gap-4 text-[var(--color-text-muted)]">
+
+              <div className="flex flex-wrap justify-center gap-3 w-full">
                 {category.skills.map((skill, i) => (
-                  <p key={i} className="font-mono text-sm group flex items-center justify-center gap-2">
-                    <span className="text-[var(--color-accent)] opacity-0 group-hover:opacity-100 transition-opacity">▹</span>
-                    <span className="group-hover:text-[var(--color-accent)] transition-colors">{skill}</span>
-                  </p>
+                  <motion.div
+                    key={i}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    className="px-4 py-2 bg-[var(--color-primary)] rounded-full text-sm font-mono text-[var(--color-text-muted)] border border-[var(--color-text-muted)]/20 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:shadow-[0_0_15px_var(--color-accent)] transition-all duration-300 cursor-default"
+                  >
+                    {skill}
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
