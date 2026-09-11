@@ -39,9 +39,11 @@ const Hero = () => {
             I'm a{' '}
             <TypeAnimation
               sequence={[
-                'Game Developer',
-                2000,
                 'Frontend Developer',
+                2000,
+                'UX/UI Designer',
+                2000,
+                'Game Developer',
                 2000,
               ]}
               wrapper="span"

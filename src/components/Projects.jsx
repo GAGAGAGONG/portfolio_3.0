@@ -40,9 +40,12 @@ const Projects = () => {
         {/* Grid Container */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <motion.div
+            <motion.a
               key={project.id}
-              className="bg-[var(--color-secondary)]/50 rounded-lg p-6 hover:-translate-y-2 hover:shadow-[0_10px_30px_-15px_var(--color-accent)] transition-all duration-300 flex flex-col group border border-transparent hover:border-[var(--color-accent)]/30"
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[var(--color-secondary)]/50 rounded-lg p-6 hover:-translate-y-2 hover:shadow-[0_10px_30px_-15px_var(--color-accent)] transition-all duration-300 flex flex-col group border border-transparent hover:border-[var(--color-accent)]/30 cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -51,10 +54,7 @@ const Projects = () => {
               <div className="flex justify-between items-center mb-6">
                 <Folder className="text-[var(--color-accent)]" size={40} />
                 <div className="flex gap-4">
-
-                  <a href={project.demo} className="text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors">
-                    <ExternalLink size={20} />
-                  </a>
+                  <ExternalLink className="text-[var(--color-text-muted)] group-hover:text-[var(--color-accent)] transition-colors" size={20} />
                 </div>
               </div>
 
@@ -71,7 +71,7 @@ const Projects = () => {
                   <li key={i}>{tool}</li>
                 ))}
               </ul>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>

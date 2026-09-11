@@ -43,6 +43,12 @@ const Achievements = () => {
       date: '19-21 March 2026',
       title: 'Overcooked Exhibition',
       description: 'Showcased “CLEAR THE AIR”, an interactive project focused on e-cigarette risk awareness, organized by PSUIC students. Developed an online exhibition website to present and promote student projects in a digital format.'
+    },
+    {
+      id: 8,
+      date: '3 April - 30 September 2026',
+      title: 'UX/UI and Front-End Developer',
+      description: 'UX/UI and Front-End Developer at Student Development and Alumni Relations, Prince of Songkla University. Designed and developed the Happy Well-Being website and the Voice of Customer website for PSU students and staff.'
     }
   ];
 

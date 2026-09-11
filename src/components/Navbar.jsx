@@ -44,12 +44,13 @@ const Navbar = () => {
                 {links.map(({ id, link, title }) => (
                     <li
                         key={id}
-                        className="capitalize font-medium flex items-center gap-1 text-[var(--color-text-main)] hover:text-[var(--color-accent)] cursor-pointer transition-colors duration-200"
+                        className="group relative capitalize font-medium flex items-center gap-1 text-[var(--color-text-main)] hover:text-[var(--color-accent)] cursor-pointer transition-colors duration-200"
                     >
 
                         <Link to={link} smooth={true} duration={500}>
                             {title}
                         </Link>
+                        <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-[var(--color-accent)] scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
                     </li>
                 ))}
             </ul>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MonitorSmartphone, Gamepad2, Settings2 } from 'lucide-react';
+import { MonitorSmartphone, Gamepad2, Palette, Settings2 } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
@@ -14,10 +14,10 @@ const Skills = () => {
       skills: ['Unity', 'C#']
     },
     {
-      title: 'Tools & Others',
-      icon: <Settings2 className="w-10 h-10 mb-4 text-[var(--color-accent)]" strokeWidth={1.5} />,
-      skills: ['Git & GitHub', 'Figma', 'Antigravity']
-    }
+      title: 'UX/UI Designer',
+      icon: <Palette className="w-10 h-10 mb-4 text-[var(--color-accent)]" strokeWidth={1.5} />,
+      skills: ['Figma', 'Google Stitch']
+    },
   ];
 
   return (
@@ -37,11 +37,11 @@ const Skills = () => {
           <div className="h-[1px] bg-[var(--color-secondary)] w-full max-w-[300px]"></div>
         </motion.div>
 
-        <div className="w-full grid md:grid-cols-3 gap-8 text-center pt-8">
+        <div className="w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center pt-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
-              className="group relative bg-[var(--color-secondary)]/30 rounded-xl p-8 shadow-md border border-transparent hover:border-[var(--color-accent)]/30 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col items-center"
+              className="group relative w-full min-w-[220px] bg-[var(--color-secondary)]/30 rounded-xl p-8 shadow-md border border-transparent hover:border-[var(--color-accent)]/30 hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col items-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
